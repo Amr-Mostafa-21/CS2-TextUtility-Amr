@@ -42,3 +42,18 @@ void Vowel_Consonant_Count(char arr[], int& v, int& co)
     }
     
 }
+
+void to_upper_case(char arr[])
+{
+    int i=0;
+    while (arr[i]!= '\0')
+    {
+        if( arr[i] >='a' && arr[i] <= 'z')
+        {
+            arr[i]=arr[i]-32;
+        }
+        i++;
+    }
+}
+
+
