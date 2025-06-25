@@ -47,3 +47,25 @@ void String_Reversal(char arr[]) {
         right--;
     }
 }
+
+int substringCount(char str[], char sub[]) {
+    int count = 0;
+    int i = 0;
+
+    if (sub[0] == '\0') return 0; 
+
+    while (str[i] != '\0') {
+        int j = 0;
+        
+        while (sub[j] != '\0' && str[i + j] == sub[j]) {
+            j++;
+        }
+        if (sub[j] == '\0') { 
+            count++;
+            i += j;       
+        } else {
+            i++;        
+        }
+    }
+    return count;
+}
