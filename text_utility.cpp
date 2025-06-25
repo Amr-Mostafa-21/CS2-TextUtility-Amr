@@ -8,3 +8,23 @@ int Character_Count(char arr[]) {
     return counter;
 }
 
+bool isPalindrome(char arr[]) {
+    int i = 0;
+
+    while (arr[i] != '\0') {
+        i++;
+    }
+
+    int left = 0;
+    int right = i - 1;
+
+    while (left < right) {
+        if (arr[left] != arr[right]) {
+            return false;
+        }
+        left++;
+        right--;
+    }
+
+    return true;
+}
