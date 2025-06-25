@@ -57,3 +57,15 @@ void to_upper_case(char arr[])
 }
 
 
+void to_lower_case(char arr[])
+{
+    int i=0;
+    while (arr[i]!= '\0')
+    {
+        if( arr[i] >='A' && arr[i] <= 'Z')
+        {
+            arr[i]=arr[i]+32;
+        }
+        i++;
+    }
+}
