@@ -19,3 +19,26 @@ int word_count(char arr[])
     return count;
 }
 
+void Vowel_Consonant_Count(char arr[], int& v, int& co)
+{
+    int i=0;
+    v=0;
+    co=0;
+    while (arr[i]!= '\0')
+    {
+        char c = arr[i];
+        if (c >= 'A' && c <= 'Z')
+            c = c + 32;
+        if(c >='a' && c<= 'z')
+        {
+            if (c == 'a' || c == 'e'|| c == 'i'|| c =='o'|| c =='u')
+            {
+                v++;
+            }
+            else
+                co++;
+        }
+        i++;
+    }
+    
+}
