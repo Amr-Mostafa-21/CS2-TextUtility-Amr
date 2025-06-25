@@ -28,3 +28,22 @@ bool isPalindrome(char arr[]) {
 
     return true;
 }
+
+void String_Reversal(char arr[]) {
+    int i = 0;
+    while (arr[i] != '\0') {
+        i++;
+    }
+
+    int left = 0;
+    int right = i - 1;
+
+    while (left < right) {
+        arr[left] = arr[left] + arr[right];
+        arr[right] = arr[left] - arr[right];
+        arr[left] = arr[left] - arr[right];
+
+        left++;
+        right--;
+    }
+}
