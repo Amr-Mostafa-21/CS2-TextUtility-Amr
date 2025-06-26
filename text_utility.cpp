@@ -23,9 +23,9 @@ int word_count(char arr[])
 
 void Vowel_Consonant_Count(char arr[], int& v, int& co)
 {
-    int i=0;
-    v=0;
-    co=0;
+    int i = 0;
+    v = 0;
+    co = 0;
     while (arr[i]!= '\0')
     {
         char c = arr[i];
