@@ -17,4 +17,6 @@ void to_lower_case(char arr[]);
 
 int substringCount(char str[], char sub[]);
 
+void vigenere(char text[], char keyword[], int mode);
+
 #endif

@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+#include <iostream>
+using namespace std;
 int word_count(char arr[])
 {
     int count=0;
@@ -142,4 +143,48 @@ int substringCount(char str[], char sub[]) {
     }
     return count;
 }
-//>>>>>>> 7282bff3ceeb1009d0cf4812933463d38c941f06
+
+int strLength(char str[]) {
+    int len = 0;
+    while (str[len] != '\0') {
+        len++;
+    }
+    return len;
+}
+
+void vigenere(char text[], char keyword[], int mode) {
+    int textLen = strLength(text);
+    int keyLen = strLength(keyword);
+    char* output = new char[textLen + 1]; 
+
+    for (int i = 0; i < textLen; ++i) {
+        char t = text[i];
+        char k = keyword[i % keyLen];
+
+        if (t >= 'a' && t <= 'z') {
+            int ti = t - 'a';
+            int ki = k - 'a';
+            int result;
+
+            switch (mode) {
+                case 0: 
+                    result = (ti + ki) % 26;
+                    break;
+                case 1: 
+                    result = (ti - ki + 26) % 26;
+                    break;
+                default:
+                    delete[] output;
+                    return;
+            }
+
+            output[i] = result + 'a';
+        } else {
+            output[i] = t;
+        }
+    }
+
+    output[textLen] = '\0'; 
+    cout << "Result: " << output << endl;
+    delete[] output; 
+}

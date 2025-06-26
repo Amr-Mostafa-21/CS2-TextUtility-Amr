@@ -7,6 +7,9 @@ int main () {
     char arr3 [] = "SAY MY name";
     char arr4 [] = "catdogcatfish";
     char sub [] = "cat";
+    char plainText[] = "attackatdawn";
+    char key[] = "lemon";
+    char encryptedText[] = "lxfopvefrnhr";
     int consonants,vowles;
     cout << "Number of words in "<<arr<<" is "<<word_count(arr)<<endl;
     cout << "Number of characters in "<<arr<<" is "<<Character_Count(arr)<<endl;
@@ -21,5 +24,10 @@ int main () {
     cout << "After converting " << arr3 << " to upper case "<< arr3<<endl;
     to_lower_case(arr3);
     cout << "After converting " << arr3 << " to lower case "<< arr3 <<endl;
-    cout <<"The number of occurnces of " << sub << "in " << arr4 << " is " << substringCount << endl;
+    cout <<"The number of occurnces of " << sub << "in " << arr4 << " is " << substringCount(arr4,sub) << endl;
+    cout << "Vigenère Cipher" <<endl;
+    cout << "Encrypting " << plainText << " with key " << key << ":"<< endl;
+    vigenere(plainText, key, 0);
+    cout << "Decrypting " << encryptedText << " with key " << key << ":" << endl;
+    vigenere(encryptedText, key, 1); 
 }
