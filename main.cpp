@@ -21,9 +21,9 @@ int main () {
     cout << "palindrome check for  " << arr2 << " is " << isPalindrome(arr2) << endl;
     cout << "palindrome check for  " << sub << " is " << isPalindrome(sub) << endl;
     to_upper_case(arr3);
-    cout << "After converting " << arr3 << " to upper case "<< arr3<<endl;
+    cout << "After converting the sentence" << arr3 << " to upper case "<< arr3<<endl;
     to_lower_case(arr3);
-    cout << "After converting " << arr3 << " to lower case "<< arr3 <<endl;
+    cout << "After converting the sentence " << arr3 << " to lower case "<< arr3 <<endl;
     cout <<"The number of occurnces of " << sub << "in " << arr4 << " is " << substringCount(arr4,sub) << endl;
     cout << "Vigenère Cipher" <<endl;
     cout << "Encrypting " << plainText << " with key " << key << ":"<< endl;
