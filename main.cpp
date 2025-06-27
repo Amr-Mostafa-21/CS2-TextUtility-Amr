@@ -2,7 +2,7 @@
 #include "text_utility.h"
 using namespace std;
 int main () {
-    char arr [] = " winter is coming";
+    char arr [] = "winter is coming";
     char arr2 [] = "level";
     char arr3 [] = "SAY MY name";
     char arr4 [] = "catdogcatfish";
@@ -16,15 +16,18 @@ int main () {
     Vowel_Consonant_Count(arr ,vowles ,consonants);
     cout << "Number of consonants in "<<arr<<" is "<<consonants<<endl;
     cout << "Number of vowles in "<<arr<<" is "<<vowles<<endl;
+    cout << "Before reversing " << arr;
     String_Reversal(arr);
-    cout << "After the reversing " << arr <<endl;
+    cout << " ,After reversing " << arr <<endl;
     cout << "palindrome check for  " << arr2 << " is " << isPalindrome(arr2) << endl;
     cout << "palindrome check for  " << sub << " is " << isPalindrome(sub) << endl;
+    cout << "Before converting to upper case: " << arr3 <<endl;
     to_upper_case(arr3);
-    cout << "After converting the sentence" << arr3 << " to upper case "<< arr3<<endl;
+    cout << "After converting the sentence to upper case: "<< arr3<<endl;
+    cout << "Before converting to lower case: " << arr3 <<endl;
     to_lower_case(arr3);
-    cout << "After converting the sentence " << arr3 << " to lower case "<< arr3 <<endl;
-    cout <<"The number of occurnces of " << sub << "in " << arr4 << " is " << substringCount(arr4,sub) << endl;
+    cout << "After converting the sentence to lower case: "<< arr3<<endl;
+    cout <<"The number of occurnces of " << sub << " in " << arr4 << " is " << substringCount(arr4,sub) << endl;
     cout << "Vigenère Cipher" <<endl;
     cout << "Encrypting " << plainText << " with key " << key << ":"<< endl;
     vigenere(plainText, key, 0);
